@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: white;
+}
+
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  align-content: center;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav>div:first-child {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  color: #0d6efd;
+}
+
+nav div:first-child>.logo {
+  font-weight: bold;
+}
+
+body {
+  position: relative;
+  z-index: -6;
+}
+
+.parent,
+.containerOfContainer {
+  position: relative;
+  z-index: -5;
+}
+
+
+.containerOfContainer div:first-of-type {
+  position: relative;
+  z-index: -4;
+}
+
+#postsContainer {
+  position: relative;
+  z-index: -3;
+}
+
+.posts {
+  position: relative;
+  z-index: -2;
+  margin-top: 178px;
+}
+
+.user-info>.user-username {
+  font-weight: bold;
+  padding: 12.5px 12.5px 0px 0px;
+  height: fit-content;
+  text-transform: capitalize;
+}
+
+
+.user-info>.user-image {
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.user-info>.user-image>img {
+  width: 100%;
+}
+
+
+
+
+.card {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.posts .card-header {
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
+}
+
+.userImgeHolder,
+.posts .card-header>figure {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  border: 2px solid #444;
+  display: inline-block;
+}
+
+
+.posts .card-header>figure {
+  margin: 0;
+}
+
+.posts .card-header>figure>img {
+  width: 100%;
+}
+
+.posts .card-header>span {
+  margin-left: 10px;
+}
+
+.btnContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.btnContainer>button:first-of-type,
+.btnContainer>button:last-of-type {
+  background-color: #0d6efd;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.posts .card-body>figure {
+  margin-bottom: 15px;
+}
+
+.posts .card-body>figure>img {
+  width: 100%;
+}
+
+
+.posts .card-body>span {
+  color: #444;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card-body .post-comments {
+  color: #444;
+  text-decoration: none;
+
+}
+
+.posts .card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.posts .card-text.viewPost {
+  white-space: initial;
+  overflow: visible;
+  text-overflow: initial;
+}
+
+
+@media (max-width:768px) {
+
+  .col-9 {
+    width: 100%;
+  }
+
+
+
+  nav div:first-child span {
+    font-size: 1rem;
+  }
+}
+
+.full-screen {
+  margin: 0px auto !important;
+  height: 100vh;
+  color: #0d6efd;
+  width: 75%;
+}
+
+.nav .nav-link {
+  cursor: pointer;
+}
+
+
+.tag {
+  background-color: #0d6efd;
+  color: white;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+
+.create-post-btn {
+  background-color: #0d6efd;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  position: fixed;
+  z-index: 999;
+  bottom: 50px;
+  right: 25px;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.commentContainer {
+  padding: 10px;
+  margin: 20px 0px;
+  background-color: #f1f2f3;
+  border-radius: 10px;
+}
+
+.commentContainer .userImgSpan {
+  display: inline-block;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.commentContainer .userImgSpan img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.commentContainer .userNameSpan {
+  font-weight: bold;
+}
+
+.commentContainer p {
+  padding: 10px 20px;
+  margin: 0px;
+}
+
+.createCommentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.createCommentContainer input {
+  width: 100%;
+  background-color: #f1f2f3;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.createCommentContainer>button {
+  margin-top: 15px;
+  padding: 5px;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 10px;
+}
+
+#showPost {
+  position: relative;
+  z-index: -4;
+  margin-top: 178px;
+}
+
+.profileContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 178px;
+}
+
+.profileUserImgContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px 0px;
+}
+
+.profileUserImgContainer>img {
+  width: 100%;
+}
+
+.profileUserNamesContainer,
+.profileUserPostInfoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.profileUserNamesContainer span,
+.profileUserPostInfoContainer span {
+  font-weight: bold;
+  text-transform: capitalize;
+  width: 100%;
+  padding: 10px 0px;
+}

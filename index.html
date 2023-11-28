@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./main.css">
+  <title>Facelook</title>
+</head>
+
+<body style="background-color: #f0ecff;">
+  <!-- modal start -->
+  <!-- login start -->
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">User Name:</label>
+              <input type="text" class="form-control username" id="recipient-name" value="melfatih111">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="col-form-label">Password:</label>
+              <input type="password" class="form-control user-password" id="password" value="123456789">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="liveAlertBtn btn btn-primary" id="user-login">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- login end -->
+  <!-- singin start -->
+  <div class="modal fade" id="singinModal" tabindex="-1" aria-labelledby="singinModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="singinModalLabel">New Acount</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="newName" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" id="newName">
+            </div>
+            <div class="mb-3">
+              <label for="userName" class="col-form-label">User Name:</label>
+              <input type="text" class="form-control" id="userName">
+            </div>
+            <div class="mb-3">
+              <label for="singinPassword" class="col-form-label">Password:</label>
+              <input type="password" class="form-control" id="singinPassword">
+            </div>
+            <div class="mb-3">
+              <label for="singinEmail" class="col-form-label">Email:</label>
+              <input type="email" class="form-control" id="singinEmail">
+            </div>
+            <div class="mb-3">
+              <label for="singinImg" class="col-form-label">User Image:</label>
+              <input type="file" class="form-control" id="singinImg">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="user-singin">Singin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- singin end -->
+  <!-- create post start -->
+  <div class="modal fade" id="creatPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="createPostModalLabel">Create New Post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="newPostTitle" class="col-form-label">Title:</label>
+              <input type="text" class="form-control" id="newPostTitle">
+            </div>
+            <div class="mb-3">
+              <label for="newPostContent" class="col-form-label">Content:</label>
+              <input type="text" class="form-control" id="newPostContent">
+            </div>
+            <div class="mb-3">
+              <label for="newPostImg" class="col-form-label">Image:</label>
+              <input type="file" class="form-control" id="newPostImg">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="createPostBtn">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- create post end -->
+  <!-- delete post start -->
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete Post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete the post
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="dalatePostBtn">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- delete post end -->
+  <!-- modal end -->
+  <!-- nav start -->
+  <nav class="container shadow p-3 bg-body-tertiary rounded">
+    <div>
+      <div class="logo">Facelook</div>
+      <div class="user-info">
+        <span class="user-username"></span>
+        <div class="user-image"></div>
+      </div>
+    </div>
+    <ul class="nav">
+      <li class="nav-item">
+        <span class="nav-link" id="homePage">Home</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link" id="profile">Profile</span>
+      </li>
+    </ul>
+    <div class="facelook-top-buttons">
+      <button type="button" class="btn btn-outline-primary the-login-btn" data-bs-toggle="modal" data-bs-target="#login"
+        data-bs-whatever="@mdo">login</button>
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#singinModal"
+        data-bs-whatever="@mdo" id="user-singin-btn">singin</button>
+      <button type="button" class="btn btn-outline-primary liveAlertBtn" id="loguot-btn">logout</button>
+    </div>
+  </nav>
+  <!-- nav end -->
+  <div class="container containerOfContainer">
+    <div class="row justify-content-center parent">
+      <div class="col-9" id="postsContainer">
+        <div class="container posts">
+        </div>
+      </div>
+      <div class="create-post-btn" data-bs-toggle="modal" data-bs-target="#creatPostModal" data-bs-whatever="@mdo">+
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container"> -->
+  <!-- posts start -->
+
+  <!-- posts end -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
